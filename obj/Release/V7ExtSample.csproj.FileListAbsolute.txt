@@ -1,0 +1,4 @@
+C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\bin\Release\V7ExtSample.dll
+C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\bin\Release\V7ExtSample.tlb
+C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\obj\Release\V7ExtSample.dll

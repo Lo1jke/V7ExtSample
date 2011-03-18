@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="V7ExtSample">
+</Property><Property Name="Файл решения" Value="C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\V7ExtSample.sln">
+</Property><Property Name="Файл параметров пользователя" Value="C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\V7ExtSample.suo">
+</Property><Property Name="Date" Value="18 марта 2011 г.">
+</Property><Property Name="Time" Value="10:16">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="V7ExtSample.sln" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\V7ExtSample.sln">
+</Event><Event ErrorLevel="0" Project="" Source="V7ExtSample.suo" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\V7ExtSample.suo">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="V7ExtSample.csproj" Description="Успешно создана резервная копия файла проекта: C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\V7ExtSample.csproj">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="V7ExtSample.csproj.user" Description="Резервная копия проекта успешно создана как C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\V7ExtSample.csproj.user">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="AddInLib\IAsyncEvent.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\AddInLib\IAsyncEvent.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="AddInLib\IErrorLog.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\AddInLib\IErrorLog.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="AddInLib\IInitDone.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\AddInLib\IInitDone.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="AddInLib\ILanguageExtender.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\AddInLib\ILanguageExtender.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="AddInLib\IStatusLine.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\AddInLib\IStatusLine.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="COMError.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\COMError.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="NetComponentSample.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\NetComponentSample.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="V7Data.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\V7Data.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="WinAPI.cs" Description="Успешно создана резервная копия файла C:\Documents and Settings\RVerhovih\Рабочий стол\Текущая Работа\PDFconf\git\V7ExtTemplate.C#\V7ExtSample\Backup\WinAPI.cs">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="V7ExtSample.csproj" Description="Проект успешно преобразован">
+</Event><Event ErrorLevel="3" Project="V7ExtSample" Source="V7ExtSample.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="V7ExtSample.sln" Description="Преобразование решения успешно завершено">
+</Event><Event ErrorLevel="3" Project="" Source="V7ExtSample.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="V7ExtSample" Source="V7ExtSample.csproj" Description="Сканирование завершено: обновление для файлов проекта не требуется.">
+</Event></UpgradeLog>
