@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -10,7 +10,7 @@ namespace V7ExtSample
 	{
 		const string c_AddinName  = "NetComponentSampleCS";
 							  
-		#region "Переменные"
+		#region "РџРµСЂРµРјРµРЅРЅС‹Рµ"
 		string strMessageBoxIcon;
 		string strMessageBoxButtons;
 		#endregion
@@ -46,29 +46,29 @@ namespace V7ExtSample
 		}
 
 		
-		#region "Свойства"
+		#region "РЎРІРѕР№СЃС‚РІР°"
 		enum Props
-		{   //Числовые идентификаторы свойств нашей внешней компоненты
-			propMessageBoxIcon = 0,  //Пиктограмма для MessageBox'а
-			propMessageBoxButtons = 1, //Кнопки для MessageBox'a
+		{   //Р§РёСЃР»РѕРІС‹Рµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ СЃРІРѕР№СЃС‚РІ РЅР°С€РµР№ РІРЅРµС€РЅРµР№ РєРѕРјРїРѕРЅРµРЅС‚С‹
+			propMessageBoxIcon = 0,  //РџРёРєС‚РѕРіСЂР°РјРјР° РґР»СЏ MessageBox'Р°
+			propMessageBoxButtons = 1, //РљРЅРѕРїРєРё РґР»СЏ MessageBox'a
 			LastProp = 2
 		}
 
 		public void GetNProps(ref int plProps)
-		{	//Здесь 1С получает количество доступных из ВК свойств
+		{	//Р—РґРµСЃСЊ 1РЎ РїРѕР»СѓС‡Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРѕСЃС‚СѓРїРЅС‹С… РёР· Р’Рљ СЃРІРѕР№СЃС‚РІ
 			plProps = (int)Props.LastProp;
 		}
         
 		public void FindProp(string bstrPropName, ref int plPropNum)
-		{	//Здесь 1С ищет числовой идентификатор свойства по его текстовому имени
+		{	//Р—РґРµСЃСЊ 1РЎ РёС‰РµС‚ С‡РёСЃР»РѕРІРѕР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРІРѕР№СЃС‚РІР° РїРѕ РµРіРѕ С‚РµРєСЃС‚РѕРІРѕРјСѓ РёРјРµРЅРё
 			switch(bstrPropName)
 			{
 				case "MessageBoxIcon":
-				case "ПиктограммаПредупреждения":
+				case "РџРёРєС‚РѕРіСЂР°РјРјР°РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ":
 					plPropNum = (int)Props.propMessageBoxIcon;
 					break;
 				case "MessageBoxButtons":
-				case "КнопкиПредупреждения":
+				case "РљРЅРѕРїРєРёРџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ":
 					plPropNum = (int)Props.propMessageBoxButtons;
 					break;
 				default:
@@ -78,12 +78,12 @@ namespace V7ExtSample
 		}
 		
 		public void GetPropName(int lPropNum, int lPropAlias, ref string pbstrPropName)
-		{	//Здесь 1С (теоретически) узнает имя свойства по его идентификатору. lPropAlias - номер псевдонима
+		{	//Р—РґРµСЃСЊ 1РЎ (С‚РµРѕСЂРµС‚РёС‡РµСЃРєРё) СѓР·РЅР°РµС‚ РёРјСЏ СЃРІРѕР№СЃС‚РІР° РїРѕ РµРіРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ. lPropAlias - РЅРѕРјРµСЂ РїСЃРµРІРґРѕРЅРёРјР°
 			pbstrPropName = "";
 		}
 
 		public void GetPropVal(int lPropNum, ref object pvarPropVal)
-		{	//Здесь 1С узнает значения свойств 
+		{	//Р—РґРµСЃСЊ 1РЎ СѓР·РЅР°РµС‚ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІ 
 			pvarPropVal = null;
 			switch(lPropNum)
 			{
@@ -97,7 +97,7 @@ namespace V7ExtSample
 		}
 		
 		public void SetPropVal(int lPropNum, ref object varPropVal)
-		{	//Здесь 1С изменяет значения свойств 
+		{	//Р—РґРµСЃСЊ 1РЎ РёР·РјРµРЅСЏРµС‚ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІ 
 
 			switch(lPropNum)
 			{
@@ -112,51 +112,51 @@ namespace V7ExtSample
 		}
 		
 		public void IsPropReadable(int lPropNum, ref bool pboolPropRead)
-		{	//Здесь 1С узнает, какие свойства доступны для чтения
-			pboolPropRead = true; // Все свойства доступны для чтения
+		{	//Р—РґРµСЃСЊ 1РЎ СѓР·РЅР°РµС‚, РєР°РєРёРµ СЃРІРѕР№СЃС‚РІР° РґРѕСЃС‚СѓРїРЅС‹ РґР»СЏ С‡С‚РµРЅРёСЏ
+			pboolPropRead = true; // Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґРѕСЃС‚СѓРїРЅС‹ РґР»СЏ С‡С‚РµРЅРёСЏ
 		}
 		
 		public void IsPropWritable(int lPropNum, ref bool pboolPropWrite)
-		{	//Здесь 1С узнает, какие свойства доступны для записи
-			pboolPropWrite = true; // Все свойства доступны для записи
+		{	//Р—РґРµСЃСЊ 1РЎ СѓР·РЅР°РµС‚, РєР°РєРёРµ СЃРІРѕР№СЃС‚РІР° РґРѕСЃС‚СѓРїРЅС‹ РґР»СЏ Р·Р°РїРёСЃРё
+			pboolPropWrite = true; // Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґРѕСЃС‚СѓРїРЅС‹ РґР»СЏ Р·Р°РїРёСЃРё
 		}
 		#endregion
 	
-		#region "Методы"
+		#region "РњРµС‚РѕРґС‹"
 
 		enum Methods
-		{	//Числовые идентификаторы методов (процедур или функций) нашей внешней компоненты
-			methMessageBoxShow = 0, //Предупреждение, но с возможностью задавать пиктограмму и заголовок окна
-			methExternalEvent = 1, //Генерирует внешнее событие (1С перехватывает его в процедуре ОбработкаВнешнегоСобытия())
-			methShowErrorLog = 2, //Показываем ошибочное сообщение 
-			methStatusLine = 3, //Показываем сообщение в строке состояния
+		{	//Р§РёСЃР»РѕРІС‹Рµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ РјРµС‚РѕРґРѕРІ (РїСЂРѕС†РµРґСѓСЂ РёР»Рё С„СѓРЅРєС†РёР№) РЅР°С€РµР№ РІРЅРµС€РЅРµР№ РєРѕРјРїРѕРЅРµРЅС‚С‹
+			methMessageBoxShow = 0, //РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ, РЅРѕ СЃ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊСЋ Р·Р°РґР°РІР°С‚СЊ РїРёРєС‚РѕРіСЂР°РјРјСѓ Рё Р·Р°РіРѕР»РѕРІРѕРє РѕРєРЅР°
+			methExternalEvent = 1, //Р“РµРЅРµСЂРёСЂСѓРµС‚ РІРЅРµС€РЅРµРµ СЃРѕР±С‹С‚РёРµ (1РЎ РїРµСЂРµС…РІР°С‚С‹РІР°РµС‚ РµРіРѕ РІ РїСЂРѕС†РµРґСѓСЂРµ РћР±СЂР°Р±РѕС‚РєР°Р’РЅРµС€РЅРµРіРѕРЎРѕР±С‹С‚РёСЏ())
+			methShowErrorLog = 2, //РџРѕРєР°Р·С‹РІР°РµРј РѕС€РёР±РѕС‡РЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ 
+			methStatusLine = 3, //РџРѕРєР°Р·С‹РІР°РµРј СЃРѕРѕР±С‰РµРЅРёРµ РІ СЃС‚СЂРѕРєРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ
 			LastMethod = 4,
 		}
 
 		public void GetNMethods(ref int plMethods)
-		{	//Здесь 1С получает количество доступных из ВК методов
+		{	//Р—РґРµСЃСЊ 1РЎ РїРѕР»СѓС‡Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРѕСЃС‚СѓРїРЅС‹С… РёР· Р’Рљ РјРµС‚РѕРґРѕРІ
 			plMethods = (int)Methods.LastMethod;
 		}
 		
 		public void FindMethod(string bstrMethodName, ref int plMethodNum)
-		{	//Здесь 1С получает числовой идентификатор метода (процедуры или функции) по имени (названию) процедуры или функции
+		{	//Р—РґРµСЃСЊ 1РЎ РїРѕР»СѓС‡Р°РµС‚ С‡РёСЃР»РѕРІРѕР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјРµС‚РѕРґР° (РїСЂРѕС†РµРґСѓСЂС‹ РёР»Рё С„СѓРЅРєС†РёРё) РїРѕ РёРјРµРЅРё (РЅР°Р·РІР°РЅРёСЋ) РїСЂРѕС†РµРґСѓСЂС‹ РёР»Рё С„СѓРЅРєС†РёРё
 			plMethodNum = -1;
 			switch(bstrMethodName)
 			{
 				case "MessageBoxShow":
-				case "Предупреждение":
+				case "РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ":
 					plMethodNum = (int)Methods.methMessageBoxShow;
 					break;
 				case "ExternalEvent":
-				case "ВнешнееСобытие":
+				case "Р’РЅРµС€РЅРµРµРЎРѕР±С‹С‚РёРµ":
 					plMethodNum = (int)Methods.methExternalEvent;
 					break;
 				case "ShowErrorLog":
-				case "Сообщить":
+				case "РЎРѕРѕР±С‰РёС‚СЊ":
 					plMethodNum = (int)Methods.methShowErrorLog;
 					break;
 				case "StatusLine":
-				case"Состояние":
+				case"РЎРѕСЃС‚РѕСЏРЅРёРµ":
 					plMethodNum = (int)Methods.methStatusLine;
 					break;
 
@@ -164,12 +164,12 @@ namespace V7ExtSample
 		}
 		
 		public void GetMethodName(int lMethodNum, int lMethodAlias, ref string pbstrMethodName)
-		{	//Здесь 1С (теоретически) получает имя метода по его идентификатору. lMethodAlias - номер синонима.
+		{	//Р—РґРµСЃСЊ 1РЎ (С‚РµРѕСЂРµС‚РёС‡РµСЃРєРё) РїРѕР»СѓС‡Р°РµС‚ РёРјСЏ РјРµС‚РѕРґР° РїРѕ РµРіРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ. lMethodAlias - РЅРѕРјРµСЂ СЃРёРЅРѕРЅРёРјР°.
 			pbstrMethodName = "";
 		}
 
 		public void GetNParams(int lMethodNum, ref int plParams)
-		{	//Здесь 1С получает количество параметров у метода (процедуры или функции)
+		{	//Р—РґРµСЃСЊ 1РЎ РїРѕР»СѓС‡Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЂР°РјРµС‚СЂРѕРІ Сѓ РјРµС‚РѕРґР° (РїСЂРѕС†РµРґСѓСЂС‹ РёР»Рё С„СѓРЅРєС†РёРё)
 			switch(lMethodNum)
 			{
 				case (int)Methods.methMessageBoxShow:
@@ -188,30 +188,30 @@ namespace V7ExtSample
 		}
 		
 		public void GetParamDefValue(int lMethodNum, int lParamNum, ref object pvarParamDefValue)
-		{	//Здесь 1С получает значения параметров процедуры или функции по умолчанию
-			pvarParamDefValue = null; //Нет значений по умолчанию
+		{	//Р—РґРµСЃСЊ 1РЎ РїРѕР»СѓС‡Р°РµС‚ Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ РїСЂРѕС†РµРґСѓСЂС‹ РёР»Рё С„СѓРЅРєС†РёРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+			pvarParamDefValue = null; //РќРµС‚ Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		}
 
 		public void HasRetVal(int lMethodNum, ref bool pboolRetValue)
-		{	//Здесь 1С узнает, возвращает ли метод значение (т.е. является процедурой или функцией)
-			pboolRetValue = true;  //Все методы у нас будут функциями (т.е. будут возвращать значение). 
+		{	//Р—РґРµСЃСЊ 1РЎ СѓР·РЅР°РµС‚, РІРѕР·РІСЂР°С‰Р°РµС‚ Р»Рё РјРµС‚РѕРґ Р·РЅР°С‡РµРЅРёРµ (С‚.Рµ. СЏРІР»СЏРµС‚СЃСЏ РїСЂРѕС†РµРґСѓСЂРѕР№ РёР»Рё С„СѓРЅРєС†РёРµР№)
+			pboolRetValue = true;  //Р’СЃРµ РјРµС‚РѕРґС‹ Сѓ РЅР°СЃ Р±СѓРґСѓС‚ С„СѓРЅРєС†РёСЏРјРё (С‚.Рµ. Р±СѓРґСѓС‚ РІРѕР·РІСЂР°С‰Р°С‚СЊ Р·РЅР°С‡РµРЅРёРµ). 
 		}
 
 		public void CallAsProc(int lMethodNum, ref System.Array paParams)
-		{	//Здесь внешняя компонента выполняет код процедур. А процедур у нас нет.
+		{	//Р—РґРµСЃСЊ РІРЅРµС€РЅСЏСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° РІС‹РїРѕР»РЅСЏРµС‚ РєРѕРґ РїСЂРѕС†РµРґСѓСЂ. Рђ РїСЂРѕС†РµРґСѓСЂ Сѓ РЅР°СЃ РЅРµС‚.
 		}
 
 		public void CallAsFunc(int lMethodNum, ref object pvarRetValue, ref System.Array paParams)
-		{	//Здесь внешняя компонента выполняет код функций.
+		{	//Р—РґРµСЃСЊ РІРЅРµС€РЅСЏСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° РІС‹РїРѕР»РЅСЏРµС‚ РєРѕРґ С„СѓРЅРєС†РёР№.
 			MessageBoxIcon icon;
-			pvarRetValue = 0; //Возвращаемое значение метода для 1С
+			pvarRetValue = 0; //Р’РѕР·РІСЂР°С‰Р°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РјРµС‚РѕРґР° РґР»СЏ 1РЎ
 			
-			switch(lMethodNum) //Порядковый номер метода
+			switch(lMethodNum) //РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ РјРµС‚РѕРґР°
 			{
-				case (int)Methods.methMessageBoxShow: //Реализуем метод MessageBoxShow внешней компоненты
+				case (int)Methods.methMessageBoxShow: //Р РµР°Р»РёР·СѓРµРј РјРµС‚РѕРґ MessageBoxShow РІРЅРµС€РЅРµР№ РєРѕРјРїРѕРЅРµРЅС‚С‹
 				{
 					icon = MessageBoxIcon.None;
-					//Преобразовываем текстовое описание значка в MessageBoxIcon.ххх
+					//РџСЂРµРѕР±СЂР°Р·РѕРІС‹РІР°РµРј С‚РµРєСЃС‚РѕРІРѕРµ РѕРїРёСЃР°РЅРёРµ Р·РЅР°С‡РєР° РІ MessageBoxIcon.С…С…С…
 					switch(strMessageBoxIcon)
 					{
 						case "Asterisk":
@@ -244,7 +244,7 @@ namespace V7ExtSample
 					}
 
 
-					//Преобразовываем текстовое описание кнопок в MessageBoxButtons.ххх
+					//РџСЂРµРѕР±СЂР°Р·РѕРІС‹РІР°РµРј С‚РµРєСЃС‚РѕРІРѕРµ РѕРїРёСЃР°РЅРёРµ РєРЅРѕРїРѕРє РІ MessageBoxButtons.С…С…С…
 					MessageBoxButtons butt = MessageBoxButtons.OK;
 					switch(strMessageBoxButtons)
 					{
@@ -274,12 +274,12 @@ namespace V7ExtSample
 					string strDialogResult;
                     
 					
-					strMessageBoxText = (string)paParams.GetValue(0); //Получаем первый параметр нашей функции - текст предупреждения
-					strMessageBoxHeader = (string)paParams.GetValue(1);//Получаем второй параметр нашей функции - заголовок предупреждения
+					strMessageBoxText = (string)paParams.GetValue(0); //РџРѕР»СѓС‡Р°РµРј РїРµСЂРІС‹Р№ РїР°СЂР°РјРµС‚СЂ РЅР°С€РµР№ С„СѓРЅРєС†РёРё - С‚РµРєСЃС‚ РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ
+					strMessageBoxHeader = (string)paParams.GetValue(1);//РџРѕР»СѓС‡Р°РµРј РІС‚РѕСЂРѕР№ РїР°СЂР°РјРµС‚СЂ РЅР°С€РµР№ С„СѓРЅРєС†РёРё - Р·Р°РіРѕР»РѕРІРѕРє РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ
 					
-					//Показываем диалоговое окно MessageBox.Show 
+					//РџРѕРєР°Р·С‹РІР°РµРј РґРёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ MessageBox.Show 
 					res = MessageBox.Show(strMessageBoxText, strMessageBoxHeader, butt, icon);
-					//Преобразовываем результат из DialogResult.ххх в текстовую строку
+					//РџСЂРµРѕР±СЂР°Р·РѕРІС‹РІР°РµРј СЂРµР·СѓР»СЊС‚Р°С‚ РёР· DialogResult.С…С…С… РІ С‚РµРєСЃС‚РѕРІСѓСЋ СЃС‚СЂРѕРєСѓ
 					switch(res)
 					{
 						case DialogResult.Abort:
@@ -311,16 +311,16 @@ namespace V7ExtSample
 							break;
 					}
 					
-					pvarRetValue = strDialogResult; //Возвращаемое значение
+					pvarRetValue = strDialogResult; //Р’РѕР·РІСЂР°С‰Р°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ
 					
-					//Сбрасываем все свойства в исходное состояние
+					//РЎР±СЂР°СЃС‹РІР°РµРј РІСЃРµ СЃРІРѕР№СЃС‚РІР° РІ РёСЃС…РѕРґРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
 					strMessageBoxButtons = "OK";
 					strMessageBoxIcon = "None";
 					break;
-				} // конец метода MessageBosIcon
+				} // РєРѕРЅРµС† РјРµС‚РѕРґР° MessageBosIcon
 					//////////////////////////////////////////////////////////
 					
-				case (int)Methods.methExternalEvent:  //Реализуем метод для генерации внешнего события
+				case (int)Methods.methExternalEvent:  //Р РµР°Р»РёР·СѓРµРј РјРµС‚РѕРґ РґР»СЏ РіРµРЅРµСЂР°С†РёРё РІРЅРµС€РЅРµРіРѕ СЃРѕР±С‹С‚РёСЏ
 				{
 					string s1;
 					string s2;
@@ -330,31 +330,31 @@ namespace V7ExtSample
 					s3 = (string)paParams.GetValue(2);
 					V7Data.AsyncEvent.ExternalEvent(s1, s2, s3);
 					break;
-				} // конец метода ExternalEvent
+				} // РєРѕРЅРµС† РјРµС‚РѕРґР° ExternalEvent
 					//////////////////////////////////////////////////////////
                 
-				case (int)Methods.methShowErrorLog:  //Реализуем метод для показа сообщения об ошибке
+				case (int)Methods.methShowErrorLog:  //Р РµР°Р»РёР·СѓРµРј РјРµС‚РѕРґ РґР»СЏ РїРѕРєР°Р·Р° СЃРѕРѕР±С‰РµРЅРёСЏ РѕР± РѕС€РёР±РєРµ
 				{
 					string s1;
 					s1 = (string)paParams.GetValue(0);
                     
 					AddInLib.ExcepInfo ei = new AddInLib.ExcepInfo();
-					ei.wCode = 1006; //Вид пиктограммы
+					ei.wCode = 1006; //Р’РёРґ РїРёРєС‚РѕРіСЂР°РјРјС‹
 					ei.bstrDescription = s1; 
 					ei.bstrSource = c_AddinName;
                     
 					V7Data.ErrorLog.AddError("", ei);
 					throw new System.Exception("An exception has occurred.");
 					//break;
-				} // конец метода ShowErrorLog
+				} // РєРѕРЅРµС† РјРµС‚РѕРґР° ShowErrorLog
 					//////////////////////////////////////////////////////////
 				
-				case (int)Methods.methStatusLine: //Реализуем тестовый метод для изменения строки состояния
+				case (int)Methods.methStatusLine: //Р РµР°Р»РёР·СѓРµРј С‚РµСЃС‚РѕРІС‹Р№ РјРµС‚РѕРґ РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ СЃС‚СЂРѕРєРё СЃРѕСЃС‚РѕСЏРЅРёСЏ
 				{
 					string s1;
 					s1 = (string)paParams.GetValue(0);
 					V7Data.StatusLine.SetStatusLine(s1);
-					System.Threading.Thread.Sleep(1000); //Делаем паузу 1 сек
+					System.Threading.Thread.Sleep(1000); //Р”РµР»Р°РµРј РїР°СѓР·Сѓ 1 СЃРµРє
 					V7Data.StatusLine.ResetStatusLine();
 					break;
 				}

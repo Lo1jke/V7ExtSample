@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 
 namespace V7ExtSample
 {
@@ -14,7 +14,7 @@ namespace V7ExtSample
 			set
 			{
 				m_V7Object = value;
-				// Вызываем неявно QueryInterface
+				// Р’С‹Р·С‹РІР°РµРј РЅРµСЏРІРЅРѕ QueryInterface
 				m_ErrorInfo = (AddInLib.IErrorLog)value;
 				m_AsyncEvent = (AddInLib.IAsyncEvent)value;
 				m_StatusLine = (AddInLib.IStatusLine)value;

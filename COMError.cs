@@ -1,4 +1,4 @@
-class COMError
+﻿class COMError
 {
 	public const uint E_UNEXPECTED = 0x8000FFFF;
 	public const uint E_POINTER = 0x80004003;
